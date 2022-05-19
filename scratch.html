@@ -13,3 +13,17 @@ function getData() {
 <p>CHANGE ME</p>
 <!-- End data-* attribute lesson -->
 
+<!-- Methods, Pass By Reference and Data Attribute -->
+<script>
+    const functionHolder = {
+        amount: 23,
+        function1(numInput) {
+            for(i = 0; i < 5; i++) {
+                console.log(numInput*functionHolder.amount);
+            }
+        }
+    }
+
+    functionHolder.function1(2);
+    
+</script>
