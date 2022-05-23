@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+    <body>
+        <span>DEMO</span>
+
+        <input type="text" />
+
+        <script>
+        const el = document.querySelector('span');
+        el.addEventListener('mouseover', makeBlue);
+        el.addEventListener('mouseout', makeYellow);
+
+        function makeBlue() {
+            el.style.background = 'blue';
+        }
+        function makeYellow() {
+            el.style.background = 'yellow';
+        }
+
+        const inputEl = document.querySelector("input");
+        // Add your event listener here
+
+        // I spent a long time figuring out why it wasn't working when I was using keypress, it's because it doesn't register the value yet. Keyup is the correct event reference.
+        inputEl.addEventListener('keyup', fixLength);
+
+        // Function that checks if length is >12 chars, and chops the last letter(s).
+        // Strange behaviour, I tried defining inputEl.value as another variable to prevent repeating myself, but it breaks the functionality. So idk. 
+        function fixLength() {
+        // let inputVal = inputEl.value [doesnt work]
+        if((inputEl.value).length > 12) {
+            (inputEl.value) = (inputEl.value).slice(0,-1);
+            }
+        }
+    </script>
+    </body>
+</html>
