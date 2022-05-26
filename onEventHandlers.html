@@ -11,22 +11,11 @@
     <span>DEMO</span>
     
     <script>
-        /*
-        function makeBlue() {
-        document.querySelector('span').style.background = 'blue';
-        }
-
-        function makeYellow() {
-        document.querySelector('span').style.background = 'yellow';
-        }*/
-
+        const el = document.querySelector('span')
 
         /* NOTE: LEAVE OUT THE PARENTHESIS IN THIS STYLE OR ELSE IT AUTO RUNS 
         /* LEAVE IN THE PARENTHESIS IF YOU'RE EXECUTING THE SCRIPT IN-LINE HTML
         /* IE, <span onmouseover=makeBlue()>foo</span>*/
-
-        const el = document.querySelector('span')
-
         el.onmouseover = makeBlue;
         el.onmouseout = makeYellow;
 

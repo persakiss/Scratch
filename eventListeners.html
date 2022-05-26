@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span>DEMO</span>
+    
+    <script>
+        const el = document.querySelector('span')
+
+        // The advantage of EventListeners over onEventHandlers is they can apply multiple of the same events to the same element, onEventHandlers can only do one
+        el.addEventListener('mouseover', makeBlue);
+        el.addEventListener('mouseover', makeTextWhite);
+        el.addEventListener('mouseout', makeYellow);
+        el.addEventListener('mouseout', makeTextGreen);
+
+        function makeBlue() {
+            document.querySelector('span').style.background = 'blue';
+        }
+        function makeYellow() {
+            document.querySelector('span').style.background = 'yellow';
+        }
+        function makeTextWhite() {
+            document.querySelector('span').style.color = 'white';
+        }
+        function makeTextGreen() {
+            document.querySelector('span').style.color = 'green';
+        }
+    </script>
+</body>
+</html>
