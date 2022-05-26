@@ -28,4 +28,7 @@ function getData() {
     
 </script>
 
-<span onmouseover="console.log('over')">TEST</span>
+
+<!-- You wouldn't do it like this, this is for demonstration. Normally you would put in the JS file 
+    document.querySelector('span').onmouseover = nameOfFunction; -->
+<span onmouseover="console.log('over')" onmouseout="console.log('out')">TEST</span> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span>DEMO</span>
+    
+    <script>
+        /*
+        function makeBlue() {
+        document.querySelector('span').style.background = 'blue';
+        }
+
+        function makeYellow() {
+        document.querySelector('span').style.background = 'yellow';
+        }*/
+
+
+        /* NOTE: LEAVE OUT THE PARENTHESIS IN THIS STYLE OR ELSE IT AUTO RUNS 
+        /* LEAVE IN THE PARENTHESIS IF YOU'RE EXECUTING THE SCRIPT IN-LINE HTML
+        /* IE, <span onmouseover=makeBlue()>foo</span>*/
+
+        const el = document.querySelector('span')
+
+        el.onmouseover = makeBlue;
+        el.onmouseout = makeYellow;
+
+        function makeBlue() {
+            document.querySelector('span').style.background = 'blue';
+        }
+        function makeYellow() {
+            document.querySelector('span').style.background = 'yellow';
+        }
+    </script>
+</body>
+</html>
