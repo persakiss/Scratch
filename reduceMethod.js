@@ -34,6 +34,7 @@ const usersByCity = users.reduce(
   }), {}
 )
 
+
 console.log(usersByCity)
 
 
@@ -80,6 +81,7 @@ const marioReducer = (state, action) => {
 const currentState = actionsArray.reduce(marioReducer, initialState);
 
 console.log(currentState);
+
 
 
 
